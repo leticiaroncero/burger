@@ -9,6 +9,9 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + "/public"));
 
+var burgerRoutes = require("./controllers/burgers_controller.js");
+app.use(burgerRoutes);
+
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT)
 });

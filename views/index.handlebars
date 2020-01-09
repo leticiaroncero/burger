@@ -1,10 +1,28 @@
 <img src="#"></img>
 
 <h1>Eat-Da-Burger!</h1>
+<div id="available-burgers">
+    {{#each burgers}}
+    {{#unless devoured}}
+    <div>
+        {{id}}. {{burger_name}}
+        <button>Devour it!</button>
+    </div>
+    {{/unless}}
+    {{/each}}
+</div>
+<div id="devoured-burgers">
+    {{#each burgers}}
+    {{#if devoured}}
+    <div>
+        {{id}}. {{burger_name}}
+    </div>
+    {{/if}}
+    {{/each}}
+</div>
 
 <form class="create-form">
     <textarea id="new-burger" name="name"></textarea></br>
     <input type="submit">
     <p>Enter a burger you want to eat. Click the "Submit" button.</p>
 </form>
-

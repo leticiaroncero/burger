@@ -15,9 +15,11 @@ h1, #form-desc {
 
 textarea {
     width: 400px;
-    height: 100px;
+    height: 5em;
     margin-top: 2em;
     border-radius: 4px;
+    resize: vertical;
+    min-height: 2em;
 }
 
 button, input {
@@ -38,4 +40,16 @@ button, input {
 
 button:hover, input:hover {
     background-color: #996acb;
+}
+
+#available-burgers, #devoured-burgers {
+    display: inline-block;
+    margin: 0 5px 0px 5px;
+    vertical-align: top;
+    text-align: left;
+}
+
+#devoured-burgers {
+    color: gray;
+    padding: 10px 0px;
 }
